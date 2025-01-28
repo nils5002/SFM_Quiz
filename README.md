@@ -1,107 +1,54 @@
-# React Counter Application
+# Modal Component with React, Vite, and SCSS
 
-This project is a simple counter application built with React and styled using SCSS. It allows users to increment and decrement a counter value by interacting with buttons.
-
-## Features
-
-- **Increment and Decrement**: Users can increase or decrease the counter value by clicking the respective buttons.
-- **Dynamic Styling**: Buttons and counter display are styled dynamically with SCSS for a polished look.
-- **Responsive Design**: The application is designed to fit various screen sizes.
+This project demonstrates a simple modal component built using React, Vite, and SCSS. The modal appears when a button is clicked and can be closed by clicking an "X" icon inside the modal.
 
 ## Technologies Used
 
-- **React**: Frontend library for building the user interface.
-- **SCSS**: CSS preprocessor for styling.
-- **Vite**: Build tool for fast development and optimized builds.
+*   **React:** A JavaScript library for building user interfaces.
+*   **Vite:** A fast and modern build tool for React applications.
+*   **SCSS:** A CSS preprocessor that extends CSS with variables, nested rules, and more.
 
-## Installation
+## Features
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Makc240305/Counter-App
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd Counter-App
-   ```
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
-4. Start the development server:
-   ```bash
-   npm run dev
-   ```
+*   Simple modal window with smooth animations.
+*   Button to trigger the modal window.
+*   Responsive design, styled using SCSS.
+*   Smooth transition for modal appearance and disappearance.
+*   Close button ("X") to dismiss the modal.
 
-## Build
+## Getting Started
 
-To create an optimized production build, run:
-```bash
-npm run build
-```
-This will generate static files in the `dist` directory.
+To run this project locally, follow these steps:
 
-## Deployment
+1.  Clone the repository:
 
-You can deploy this application to GitHub Pages, Vercel, or Netlify. For GitHub Pages:
+    ```bash
+    git clone [https://github.com/your-username/modal-react-vite-scss.git](https://github.com/your-username/modal-react-vite-scss.git)
+    ```
 
-1. Install `gh-pages`:
-   ```bash
-   npm install gh-pages --save-dev
-   ```
-2. Add the following scripts to your `package.json`:
-   ```json
-   "scripts": {
-     "build": "vite build",
-     "deploy": "gh-pages -d dist"
-   }
-   ```
-3. Deploy the project:
-   ```bash
-   npm run deploy
-   ```
-4. Your application will be available at:
-   ```
-   https://Makc240305.github.io/Counter-App/
-   ```
+2.  Navigate to the project directory:
 
-## File Structure
+    ```bash
+    cd modal-react-vite-scss
+    ```
 
-```
-├── src
-│   ├── App.jsx          # Main application component
-│   ├── index.scss       # Styling with SCSS
-│   └── main.jsx         # Application entry point
-├── public
-│   └── index.html       # HTML template
-├── package.json         # Project metadata and dependencies
-└── vite.config.js       # Vite configuration
-```
+3.  Install the dependencies:
 
-## SCSS Styling
+    ```bash
+    npm install
+    ```
 
-The application is styled using SCSS. Key features include:
+4.  Start the development server:
 
-- Dynamic color adjustments for buttons.
-- Responsive layout with Flexbox.
+    ```bash
+    npm run dev
+    ```
 
-Example SCSS snippet:
-```scss
-button {
-  &.plus {
-    background-color: #2a9d8f;
-    color: #fff;
-    &:hover {
-      transform: translateY(-2px);
-    }
-  }
+The app should now be running on `http://localhost:3000`.
 
-  &.minus {
-    background-color: #e63946;
-    color: #fff;
-    &:hover {
-      transform: translateY(-2px);
-    }
-  }
-}
-```
+## How It Works
+
+The modal is controlled using React's state (`useState`).
+
+*   Clicking the trigger button sets the modal state to visible.
+*   Clicking the close button or anywhere outside the modal triggers a function to hide the modal.
