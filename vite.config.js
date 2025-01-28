@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base:'https://github.com/Makc240305/Counter-App.git',
+  base:'/Counter-App/',
   plugins: [react()],
 })
