@@ -1,25 +1,38 @@
 import { questions } from "../data";
-import { useState } from "react";
 
-export default function Game() {
-  const [step, setStep] = useState(0);
+export default function Game({
+  step,
+  setStep,
+  correctUnswers,
+  setCorrectUnswers,
+}) {
   const question = questions[step];
 
-  const onClickWtf = (index) =>{
-    console.log(step, index);
-  }
+  const percentageBar = Math.round((step / questions.length) * 100);
+
+  const onClickOption = (index) => {
+    
+    setStep(step + 1);
+    if (index === question.correct) {
+      setCorrectUnswers(correctUnswers + 1);
+    }
+    console.log(correctUnswers);
+  };
+
   return (
     <>
       <div className="progress">
-        <div style={{ width: "50%" }} className="progress__inner"></div>
+        <div
+          style={{ width: `${percentageBar}%` }}
+          className="progress__inner"
+        ></div>
       </div>
       <h1>{question.title}</h1>
       <ul>
         {question.variants.map((text, index) => (
-            
-          <li key={text} onClick={()=> onClickWtf(index)}>
+          <li key={text} onClick={() => onClickOption(index)}>
             {text}
-            </li>
+          </li>
         ))}
       </ul>
     </>
