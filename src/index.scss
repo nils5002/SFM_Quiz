@@ -1,22 +1,22 @@
 @use "sass:color";
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap");
 
 *:focus {
   outline: none;
-  -webkit-tap-highlight-color: transparent
+  -webkit-tap-highlight-color: transparent;
 }
 
 *:focus-visible {
   outline: 2px solid #2a9d8f;
-  outline-offset: 4px
+  outline-offset: 4px;
 }
 
 body {
   margin: 0;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #00b3b3;
+  background-color: #5be2e2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,6 +24,7 @@ body {
 }
 
 .App {
+  min-height: 30vh;
   width: 60vw;
   max-width: 31.25rem;
   border-radius: 30px;
@@ -31,21 +32,46 @@ body {
   background-color: #fff;
   position: relative;
 
+  button {
+    font-weight: bold;
+    font-family: "Nunito", sans-serif;
+    border-radius: 30px;
+    border: 0;
+    padding: 0.9375rem 1.875rem;
+    font-size: 1.25rem;
+    background-color: color.adjust(#ff006e, $lightness: 3%);
+    color: #fff;
+    margin-top: 1.25rem;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+      background-color: color.adjust(#ff006e, $lightness: -10%);
+    }
+    &:active{
+      transform:scale(0.98);
+    }
+  }
+
+  .start {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+
+    img {
+      width:8rem;
+      height: auto;
+    }
+    button{
+      margin: 0;
+    }
+  }
+
   .result {
     text-align: center;
-
-    button {
-      font-weight: bold;
-      font-family: 'Nunito', sans-serif;
-      border-radius: 30px;
-      border: 0;
-      padding: .9375rem 1.875rem;
-      font-size: 1.25rem;
-      background-color: color.adjust(#ff006e, $lightness: 3%);
-      color: #fff;
-      margin-top: 1.25rem;
-      cursor: pointer;
-    }
 
     h2 {
       margin-bottom: 0;
@@ -54,10 +80,13 @@ body {
     img {
       width: 150px;
     }
+    strong{
+      font-size: 1.5em;
+    }
   }
 
   .progress {
-    height: .625rem;
+    height: 0.625rem;
     border-radius: 30px;
     background-color: rgb(232, 232, 232);
     margin-bottom: 1.5625rem;
@@ -68,13 +97,17 @@ body {
       width: 80%;
       background: rgb(18, 231, 48);
       transition: all 0.3s ease-in-out;
-      background: linear-gradient(90deg, rgba(18, 231, 48, 1) 0%, rgba(0, 212, 255, 1) 100%);
+      background: linear-gradient(
+        90deg,
+        rgba(18, 231, 48, 1) 0%,
+        rgba(0, 212, 255, 1) 100%
+      );
     }
   }
 
   &:before,
   &:after {
-    content: '';
+    content: "";
     display: block;
     height: 3.125rem;
     border-bottom-left-radius: 30px;
@@ -107,15 +140,18 @@ body {
     padding: 0;
 
     li {
-      padding: .9375rem;
+      padding: 0.9375rem;
       border: 2px solid rgba(0, 0, 0, 0.1);
       border-radius: 15px;
-      margin-bottom: .625rem;
+      margin-bottom: 0.625rem;
       cursor: pointer;
       transition: all 0.1s ease-in-out;
 
       &:hover {
         border: 2px solid rgba(0, 0, 0, 0.3);
+      }
+      &:active{
+        transform:scale(0.98);
       }
     }
   }
