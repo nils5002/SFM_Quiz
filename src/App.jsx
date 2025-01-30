@@ -7,13 +7,17 @@ import { useState } from "react";
 export default function App() {
   const [step, setStep] = useState(0);
   const [correctUnswers, setCorrectUnswers] = useState(0);
-
   return (
     <div className="App">
       {step !== questions.length ? (
-        <Game step={step} setStep={setStep} correctUnswers={correctUnswers} setCorrectUnswers={setCorrectUnswers}/>
+        <Game
+          step={step}
+          setStep={setStep}
+          correctUnswers={correctUnswers}
+          setCorrectUnswers={setCorrectUnswers}
+        />
       ) : (
-        <Result correctUnswers = {correctUnswers}/>
+        <Result correctUnswers={correctUnswers} />
       )}
     </div>
   );
