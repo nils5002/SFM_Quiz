@@ -8,7 +8,7 @@ export default function Result({ correctUnswers }) {
         Your result is: <br />
         <strong>{correctUnswers}</strong>/{questions.length}
       </h2>
-      <a href="/">
+      <a href="https://makc240305.github.io/Quiz-app/">
         <button>Try again</button>
       </a>
     </div>
