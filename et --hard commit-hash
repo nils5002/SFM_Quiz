@@ -1,0 +1,78 @@
+[33mcommit 4b0e9d230fa94252c83dc11c549b4b4587b5ffdc[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Maksym Torbenko <maxim240305@gmail.com>
+Date:   Thu Jan 30 20:47:23 2025 +0100
+
+    Update README.md
+
+[33mcommit 8290bb692c1b6dab9ca66e795dceb6d07a610ad4[m
+Merge: 187253c eb9ab71
+Author: Maksym Torbenko <maxim240305@gmail.com>
+Date:   Thu Jan 30 20:41:13 2025 +0100
+
+    Merge pull request #2 from Makc240305/dev
+    
+    Dev
+
+[33mcommit eb9ab7107b617a1723e98df52d7f5d8a5f1eab1f[m[33m ([m[1;31morigin/dev[m[33m)[m
+Merge: 187253c d86ea96
+Author: Maksym Torbenko <maxim240305@gmail.com>
+Date:   Thu Jan 30 20:39:57 2025 +0100
+
+    Merge pull request #1 from Makc240305/feature/react
+    
+    Feature/react
+
+[33mcommit d86ea969ae12a408ef23c836baa8b09e11a8747c[m[33m ([m[1;31morigin/feature/react[m[33m)[m
+Author: Makc240305 <maxim240305@gmail.com>
+Date:   Thu Jan 30 20:37:38 2025 +0100
+
+    added start and scss styles
+
+[33mcommit 7df166db57f7e3b4c7340e4e3e65c139f0f77d5c[m
+Author: Makc240305 <maxim240305@gmail.com>
+Date:   Thu Jan 30 18:15:15 2025 +0100
+
+    add react logic
+
+[33mcommit 187253ced2e4719f94096ff9e814143362141a41[m
+Author: Makc240305 <maxim240305@gmail.com>
+Date:   Wed Jan 29 01:46:31 2025 +0100
+
+    initial commit
+
+[33mcommit d186d26545c07ee83da7dd941240af2e33da0aa3[m
+Author: Makc240305 <maxim240305@gmail.com>
+Date:   Tue Jan 28 16:51:57 2025 +0100
+
+    Initial commit
+
+[33mcommit 788ec6e16eb366cc991d810be7e89c8628c087d0[m
+Author: Makc240305 <maxim240305@gmail.com>
+Date:   Tue Jan 28 13:07:09 2025 +0100
+
+    Add new base to vite config
+
+[33mcommit 1273ad8a553c14065a1f7005d97a6491fe02cbbf[m
+Merge: 320b941 2cebd59
+Author: Makc240305 <maxim240305@gmail.com>
+Date:   Tue Jan 28 12:58:26 2025 +0100
+
+    Resolved merge conflicts
+
+[33mcommit 320b941b6461ecf63ba47e4c49011e98eb52302f[m
+Author: Makc240305 <maxim240305@gmail.com>
+Date:   Tue Jan 28 12:46:39 2025 +0100
+
+    Some changes
+
+[33mcommit 2cebd5911eefdd226b0b627337cab9159deff1ab[m
+Author: Makc240305 <maxim240305@gmail.com>
+Date:   Tue Jan 28 12:39:02 2025 +0100
+
+    README.md
+
+[33mcommit a510f709a77e618f6d1a0d4dc4f5d26517c950a4[m
+Author: Makc240305 <maxim240305@gmail.com>
+Date:   Tue Jan 28 12:25:49 2025 +0100
+
+    Initial commit
