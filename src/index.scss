@@ -7,7 +7,7 @@
 }
 
 *:focus-visible {
-  outline: 2px solid #2a9d8f;
+  outline: 2px solid #d44f1f; // Stahlrot für den Fokus
   outline-offset: 4px;
 }
 
@@ -16,7 +16,7 @@ body {
   font-family: "Nunito", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #5be2e2;
+  background-color: #2b2b2b; // Dunkles Grau für einen industriellen Look
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,29 +27,31 @@ body {
   min-height: 30vh;
   width: 60vw;
   max-width: 31.25rem;
-  border-radius: 30px;
-  padding: 1.875rem;
-  background-color: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  background-color: #f4f4f4; // Hellgrau für den Hintergrund
   position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); // Schattierung für Tiefe
 
   button {
     font-weight: bold;
     font-family: "Nunito", sans-serif;
-    border-radius: 30px;
+    border-radius: 25px;
     border: 0;
-    padding: 0.9375rem 1.875rem;
+    padding: 0.9375rem 2rem;
     font-size: 1.25rem;
-    background-color: color.adjust(#ff006e, $lightness: 3%);
+    background-color: #d44f1f; // Rostrot als Button-Hintergrund
     color: #fff;
     margin-top: 1.25rem;
     cursor: pointer;
-    transition: all 0.1s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 
     &:hover {
-      background-color: color.adjust(#ff006e, $lightness: -10%);
+      background-color: #bb3e1a; // Dunkleres Rostrot für Hover
     }
-    &:active{
-      transform:scale(0.98);
+    &:active {
+      transform: scale(0.98);
     }
   }
 
@@ -62,10 +64,10 @@ body {
     gap: 2rem;
 
     img {
-      width:8rem;
+      width: 6rem;
       height: auto;
     }
-    button{
+    button {
       margin: 0;
     }
   }
@@ -75,33 +77,29 @@ body {
 
     h2 {
       margin-bottom: 0;
+      color: #d44f1f; // Stahlrot für Überschrift
     }
 
     img {
-      width: 150px;
+      width: 120px;
     }
-    strong{
+    strong {
       font-size: 1.5em;
     }
   }
 
   .progress {
     height: 0.625rem;
-    border-radius: 30px;
-    background-color: rgb(232, 232, 232);
+    border-radius: 10px;
+    background-color: #8a8a8a; // Dunkles Grau für Fortschrittsbalken
     margin-bottom: 1.5625rem;
 
     &__inner {
       height: 100%;
-      border-radius: 30px;
+      border-radius: 10px;
       width: 80%;
-      background: rgb(18, 231, 48);
+      background: linear-gradient(90deg, rgba(18, 231, 48, 1) 0%, rgba(0, 212, 255, 1) 100%);
       transition: all 0.3s ease-in-out;
-      background: linear-gradient(
-        90deg,
-        rgba(18, 231, 48, 1) 0%,
-        rgba(0, 212, 255, 1) 100%
-      );
     }
   }
 
@@ -110,8 +108,8 @@ body {
     content: "";
     display: block;
     height: 3.125rem;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -133,6 +131,7 @@ body {
 
   h1 {
     margin: 0;
+    color: #2b2b2b; // Dunkles Grau für den Haupttitel
   }
 
   ul {
@@ -141,18 +140,56 @@ body {
 
     li {
       padding: 0.9375rem;
-      border: 2px solid rgba(0, 0, 0, 0.1);
-      border-radius: 15px;
+      border: 2px solid rgba(0, 0, 0, 0.2); // Dünner schwarzer Rand
+      border-radius: 10px;
       margin-bottom: 0.625rem;
       cursor: pointer;
       transition: all 0.1s ease-in-out;
+      background-color: #d9d9d9; // Hellgrau für die Listenelemente
 
       &:hover {
-        border: 2px solid rgba(0, 0, 0, 0.3);
+        background-color: #c0c0c0; // Etwas dunkleres Grau beim Hover
       }
-      &:active{
-        transform:scale(0.98);
+
+      &:active {
+        transform: scale(0.98);
+      }
+
+      &.correct {
+        background-color: #4caf50; // Grün für die richtige Antwort
+        color: white;
+      }
+
+      &.incorrect {
+        background-color: #f44336; // Rot für die falsche Antwort
+        color: white;
       }
     }
+  }
+
+  /* Eingabefeld für Frage und Antwort */
+  input[type="text"], input[type="number"] {
+    width: 100%;
+    max-width: 500px; /* Maximale Breite für größere Felder */
+    padding: 1rem; /* Mehr Innenabstand für größere Felder */
+    font-size: 1.125rem; /* Etwas größere Schrift für bessere Lesbarkeit */
+    border: 2px solid #d44f1f; /* Rostrote Randfarbe, passend zum Design */
+    border-radius: 12px; /* Abgerundete Ecken */
+    background-color: #f4f4f4; /* Heller Hintergrund für das Eingabefeld */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Sanfte Übergänge */
+    color: #333; /* Dunkle Textfarbe */
+  }
+
+  /* Fokussierung auf das Eingabefeld */
+  input[type="text"]:focus, input[type="number"]:focus {
+    outline: none;
+    border-color: #bb3e1a; /* Dunklerer Rostrot beim Fokussieren */
+    box-shadow: 0 0 10px rgba(255, 77, 77, 0.5); /* Leichter Schlagschatten */
+  }
+
+  /* Styling für das Eingabefeld bei aktivem Fokus */
+  input[type="text"]:active, input[type="number"]:active {
+    transform: scale(1.05); /* Vergrößert das Feld bei Aktivierung */
+    box-shadow: 0 0 15px rgba(255, 77, 77, 0.4); /* Ein stärkerer Schlagschatten */
   }
 }
