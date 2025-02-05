@@ -13,14 +13,10 @@ This is a simple quiz application that allows users to add questions and answers
 ## Installation
 
 1. Clone the repository:
-
    ```sh
    git clone https://github.com/nils5002/your-repo.git
 
-
-
 2.Install dependencies:
-
 ```sh
 npm install
 
