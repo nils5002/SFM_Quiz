@@ -19,8 +19,3 @@ This is a simple quiz application that allows users to add questions and answers
 2.Install dependencies:
 ```sh
 npm install
-
-
-
-
-
