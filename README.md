@@ -16,7 +16,6 @@ This is a simple quiz application that allows users to add questions and answers
 
    ```sh
    git clone https://github.com/nils5002/your-repo.git
-   cd your-repo
 
 
 
@@ -26,12 +25,6 @@ This is a simple quiz application that allows users to add questions and answers
 npm install
 
 
-
-
-3.Start the application:
-
-```sh
-npm start
 
 
 
